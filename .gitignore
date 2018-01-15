@@ -1,2 +1,6 @@
 # Vim swap
 .*.sw*
+
+# Python build artifacts
+*.pyc
+*.egg-info/
