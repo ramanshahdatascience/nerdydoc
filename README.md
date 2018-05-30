@@ -48,6 +48,14 @@ blocker in achieving the above goals.
   it when hosting teaching material on GitHub, but when building or maintaining
   a software library, I won't.
 
+But to respect the ecosystem, I'd like `nerdydoc` to play nicely enough with
+Sphinx. The systems will be different enough that "subset" is not a great term,
+but one should not be able to write a `nerdydoc`-compilable piece of source
+documentation (docstring, `README`, etc.) that breaks Sphinx. Then a `nerdydoc`
+user has a clear roadmap to migrating to a fancier documentation site when the
+need arises: simply switch to Sphinx. There would be no more overhead than in
+configuring a Sphinx site in the first place.
+
 I quite admire [pdoc](https://github.com/BurntSushi/pdoc); its performance,
 ease of use, and focus on a package's public API is a major inspiration. But
 enough details are different that a different documentation tool may be
