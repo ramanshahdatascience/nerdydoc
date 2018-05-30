@@ -12,9 +12,10 @@ line. Configuration would be minimal and declarative, based on data, not code;
 authorship outside of the codebase, beyond canonical text-based artifacts like
 the project `README`, would be zero. To reward the author for good docstring
 and `README` authorship and minimize locations for decaying documentation,
-content in the site would be restricted to docstring material and entire such
-files patched into the site. I'd be able to configure my repo to render GitHub
-Pages from the `docs/` directory on `master` and be done.
+content in the site would be restricted to two sources: (a) docstring material
+and (b) entire files, such as the `README` and `LICENSE`, patched into the
+site. I'd be able to configure my repo to render GitHub Pages from the `docs/`
+directory on `master` and be done.
 
 I'm OK with an opinionated web design if it's good and removes moving parts
 from the workflow. I'm OK jettisoning features like doctests that violate the
@@ -32,10 +33,11 @@ blocker in achieving the above goals.
   PR, it is difficult to confirm by inspection that the docs were re-built to
   reflect the latest version of the codebase. I'd love a solution that involves
   a single source of truth in version control rather than a codebase and a
-  duplicative static website susceptible to stale-cache mistakes. But now that
-  it can deploy from `master` (obviating the severe abuse of Git branching
-  implicit in the `gh-pages` workflow), GitHub Pages is good, and I'm willing
-  to commit a single duplicative build artifact to make use of it.
+  duplicative static website susceptible to stale-cache mistakes. Deploying
+  documentation with the old `gh-pages` workflow involved severe abuse of Git
+  branching, which I hated. But now that GitHub Pages can deploy from `master`,
+  I feel what GitHub offers is good enough to justify a single duplicative
+  build artifact.
 - `autodoc` makes it hard to surface a package's public API. By default, I am
   inundated with junk documentation of leading-underscore internal functions
   that the user is not supposed to know about. The natural naming surfaced by
