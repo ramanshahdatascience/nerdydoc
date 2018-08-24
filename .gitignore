@@ -4,3 +4,6 @@
 # Python build artifacts
 *.pyc
 *.egg-info/
+
+# Virtual environment
+venv/
